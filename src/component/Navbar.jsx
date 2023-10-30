@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return(
-        <div>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-        </div>
+        <nav className='nav nav-pills justify-content-center p-2 shadow'>
+            <NavLink to="/" className={({ isActive }) => `nav-link ${isActive && 'active'}`}>Home</NavLink>
+            <NavLink to="/about" className={({ isActive }) => `nav-link ${isActive && 'active'}`}>About</NavLink>
+        </nav>
     );
 }
 
